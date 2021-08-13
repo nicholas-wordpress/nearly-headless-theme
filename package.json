@@ -1,0 +1,25 @@
+{
+  "name": "nearly-headless-theme",
+  "version": "1.0.0",
+  "description": "This is a plugin boilerplate built on the [Underpin](https://github.com/alexstandiford/underpin) Framework. For information on how to use this, check out Underpin's docs.",
+  "main": "webpack.config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "wp-scripts build",
+    "format:js": "wp-scripts format-js",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "start": "wp-scripts start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alpinejs": "^3.2.3",
+    "nicholas": "^1.0.0"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "*"
+  }
+}
