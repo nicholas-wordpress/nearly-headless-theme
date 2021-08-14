@@ -7,7 +7,10 @@
  * @var Theme\Abstracts\Template $template
  */
 
-if ( ! theme()->templates()->is_valid_template( $template ) ) {
+use Nicholas\Nicholas;
+use function Nicholas\nicholas;
+
+if ( ! nicholas()->templates()->is_valid_template( $template ) ) {
 	return;
 }
 ?>
@@ -17,23 +20,23 @@ if ( ! theme()->templates()->is_valid_template( $template ) ) {
 		while ( have_posts() ) {
 			the_post();
 			if ( is_singular() ) {
-				echo theme()->templates()->get_template( 'index', 'post', [
-					'content' => get_buffer( 'the_content' ),
-					'title'   => get_buffer( 'the_title' ),
+				echo nicholas()->templates()->get_template( 'index', 'post', [
+					'content' => Nicholas::get_buffer( 'the_content' ),
+					'title'   => Nicholas::get_buffer( 'the_title' ),
 				] );
 
-				echo theme()->templates()->get_template( 'index', 'comments' );
+				echo nicholas()->templates()->get_template( 'index', 'comments' );
 			} else {
-				echo theme()->templates()->get_template( 'index', 'archive-post', [
-					'excerpt' => get_buffer( 'the_excerpt' ),
-					'title'   => get_buffer( 'the_title' ),
+				echo nicholas()->templates()->get_template( 'index', 'archive-post', [
+					'excerpt' => Nicholas::get_buffer( 'the_excerpt' ),
+					'title'   => Nicholas::get_buffer( 'the_title' ),
 					'link'    => get_post_permalink(),
 				] );
 			}
 		}
 		if ( ! is_singular() ) {
-			echo theme()->templates()->get_template( 'index', 'archive-pagination', [
-				'pagination' => get_buffer( 'the_posts_pagination' ),
+			echo nicholas()->templates()->get_template( 'index', 'archive-pagination', [
+				'pagination' => Nicholas::get_buffer( 'the_posts_pagination' ),
 			] );
 		}
 	}

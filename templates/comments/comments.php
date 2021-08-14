@@ -7,7 +7,9 @@
  * @var Theme\Abstracts\Template $template
  */
 
-if ( ! theme()->templates()->is_valid_template( $template ) || ! comments_open() ) {
+use function Nicholas\nicholas;
+
+if ( ! nicholas()->templates()->is_valid_template( $template ) || ! comments_open() ) {
 	return;
 }
 comments_template();

@@ -9,5 +9,5 @@
 ?>
 <?php
 get_header();
-echo theme()->templates()->get_template( 'index', 'index' );
+echo Nicholas\nicholas()->templates()->get_template( 'index', 'index' );
 get_footer();

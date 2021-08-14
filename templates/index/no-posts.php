@@ -6,11 +6,12 @@
  * @date  : 12/21/19
  * @var Theme\Abstracts\Template $template
  */
+use function Nicholas\nicholas;
 
-if ( ! theme()->templates()->is_valid_template( $template ) ) {
+if ( ! nicholas()->templates()->is_valid_template( $template ) ) {
 	return;
 }
 ?>
 <div>
-	<?= theme()->__('Sorry, there is no content to show.') ?>
+	<?= nicholas()->__('Sorry, there is no content to show.') ?>
 </div>

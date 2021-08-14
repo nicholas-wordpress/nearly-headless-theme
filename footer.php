@@ -7,4 +7,4 @@
  * You're probably looking for /templates/footer/footer.php
  */
 ?>
-<?= theme()->templates()->get_template( 'footer', 'footer' ) ?>
+<?= Nicholas\nicholas()->templates()->get_template( 'footer', 'footer' ) ?>

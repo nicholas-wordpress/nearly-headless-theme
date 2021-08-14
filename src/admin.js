@@ -3,7 +3,7 @@ import { render, useState } from '@wordpress/element'
 import { Button, TextControl, Spinner, Dashicon } from '@wordpress/components'
 import { __ } from '@wordpress/i18n'
 import apiFetch from '@wordpress/api-fetch'
-import { Url } from 'nicholas'
+import { Url } from 'nicholas-router'
 
 const fetch = apiFetch
 

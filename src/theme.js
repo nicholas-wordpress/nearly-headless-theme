@@ -20,7 +20,7 @@ import {
 	setupRouter,
 	Url,
 	validateMiddleware
-} from "nicholas";
+} from "nicholas-router";
 
 // Set up our own instance of apiFetch. This gets exported and is accessible globally via theme.fetch
 // This allows us to create preloading middleware and other cool optimizations to our fetch API.

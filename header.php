@@ -7,4 +7,4 @@
  * You're probably looking for /templates/header/header.php
  */
 ?>
-<?= theme()->templates()->get_template( 'header', 'header' ) ?>
+<?= Nicholas\nicholas()->templates()->get_template( 'header', 'header' ) ?>

@@ -1,4 +1,4 @@
-import { clearCache } from 'nicholas'
+import { clearCache } from 'nicholas-router'
 
 function check() {
 	new Promise( async ( res, rej ) => {

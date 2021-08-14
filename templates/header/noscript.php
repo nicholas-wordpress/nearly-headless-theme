@@ -7,7 +7,10 @@
  * @var Theme\Abstracts\Template $template
  */
 
-if ( ! theme()->templates()->is_valid_template( $template ) || use_compatibility_mode() ) {
+use Nicholas\Nicholas;
+use function Nicholas\nicholas;
+
+if ( ! nicholas()->templates()->is_valid_template( $template ) || Nicholas::use_compatibility_mode() ) {
 	return;
 }
 

@@ -1,4 +1,4 @@
-import { Url } from "nicholas";
+import { Url } from "nicholas-router";
 import Alpine from "alpinejs";
 import { setStore } from '../../helpers'
 
