@@ -141,7 +141,7 @@ function App() {
 	if ( isLoading && false === data ) {
 
 		new Promise( async ( res, rej ) => {
-				const data = await admin.fetch( { path: 'theme/v1/settings' } )
+				const data = await admin.fetch( { path: 'nicholas/v1/settings' } )
 				setData( data )
 				setSearch( data.compatibility_mode_urls )
 				setLoading( false )

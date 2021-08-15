@@ -162,12 +162,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nicholas-wordpress/underpin-module.git",
-                "reference": "6531f2c7c11ff7377276c46eedf264f66ed2a40c"
+                "reference": "b019abb9fd34d45a5e9778800b69ef716b2e76c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nicholas-wordpress/underpin-module/zipball/6531f2c7c11ff7377276c46eedf264f66ed2a40c",
-                "reference": "6531f2c7c11ff7377276c46eedf264f66ed2a40c",
+                "url": "https://api.github.com/repos/nicholas-wordpress/underpin-module/zipball/b019abb9fd34d45a5e9778800b69ef716b2e76c1",
+                "reference": "b019abb9fd34d45a5e9778800b69ef716b2e76c1",
                 "shasum": ""
             },
             "require": {
@@ -202,7 +202,7 @@
                 "issues": "https://github.com/nicholas-wordpress/underpin-module/issues",
                 "source": "https://github.com/nicholas-wordpress/underpin-module/tree/1.0.0"
             },
-            "time": "2021-08-14T19:39:02+00:00"
+            "time": "2021-08-15T14:49:32+00:00"
         },
         {
             "name": "underpin/cron-job-loader",
