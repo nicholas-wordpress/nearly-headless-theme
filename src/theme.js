@@ -1,17 +1,12 @@
 import Alpine from 'alpinejs'
-import apiFetch from '@wordpress/api-fetch'
 import Post from './components/Post'
 import Comments from './components/Comments'
-import primeCache from './middlewares/route/primeCache'
 import fetchComments from './middlewares/route/fetchComments'
 import updateStore from './middlewares/route/updateStore'
-import validateCompatibilityMode from './middlewares/route/validateCompatibilityMode'
 import updateHistory from './middlewares/route/updateHistory'
-import updateAdminBar from './middlewares/route/updateAdminBar'
-import validateAdminPage from './middlewares/route/validateAdminPage'
 import setupPopstate from './middlewares/setup/setupPopstate'
 import validateCache from './middlewares/setup/validateCache'
-import { setStore, setLoadingState, setCompatibilityModeUrls, setHistory } from './helpers'
+import { setStore, setLoadingState, setHistory } from './helpers'
 import {
 	addCacheActions,
 	addRouteActions,
@@ -22,9 +17,14 @@ import {
 	validateMiddleware
 } from "nicholas-router";
 
-// Set up our own instance of apiFetch. This gets exported and is accessible globally via theme.fetch
-// This allows us to create preloading middleware and other cool optimizations to our fetch API.
-const fetch = apiFetch
+import fetch from 'nicholas-wp'
+
+import {
+	updateAdminBar,
+	validateAdminPage,
+	validateCompatibilityMode,
+	primeCache
+} from 'nicholas-wp/middlewares'
 
 // Delay startup of this script until after the page is loaded.
 window.onload = function () {
@@ -37,7 +37,6 @@ window.onload = function () {
 		// By passing an empty object here, we basically force it to reset.
 		setStore( {} )
 		setLoadingState( true )
-		Alpine.store( 'compatibilityModeUrls', [] );
 		Alpine.store( 'comments', '' )
 
 
@@ -47,7 +46,6 @@ window.onload = function () {
 		// Setup the Alpine store
 		setStore( pageData[0] )
 		setLoadingState( false )
-		setCompatibilityModeUrls()
 
 		// Store data in the cache
 		new Url( window.location.href ).updateCache( pageData[0] )
@@ -62,6 +60,7 @@ window.onload = function () {
 		// Validate this page doesn't require compatibility mode
 		validateCompatibilityMode,
 		// Then, we prime the cache for this URL
+		//TODO: CREATE SETLOADING STATE MIDDLEWARE
 		primeCache,
 		// Then, we Update the Alpine store
 		updateStore,
@@ -73,12 +72,12 @@ window.onload = function () {
 		updateAdminBar
 	)
 
-	// Fire up Nicholas
+	// Fire up Nicholas router
 	setupRouter( handleClickMiddleware, setupPopstate, validateCache )
 
 	// Fire up AlpineJS
 	Alpine.start()
 }
 
-
+// Export fetch so we can add middlware.
 export { fetch, Post, Comments }
