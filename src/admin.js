@@ -46,7 +46,7 @@ function UrlField( { setLoading, isLoading, setData, urls, setSearch } ) {
 		new Promise( async ( res, rej ) => {
 			setLoading( true )
 			await admin.fetch( {
-				path: '/theme/v1/settings/update',
+				path: '/nicholas/v1/settings/update',
 				method: 'POST',
 				data: { compatibility_mode_urls: urls }
 			} )
@@ -171,7 +171,7 @@ function App() {
 		new Promise( async ( res, rej ) => {
 				setLoading( true )
 				await admin.fetch( {
-					path: '/theme/v1/settings/update',
+					path: '/nicholas/v1/settings/update',
 					method: 'POST',
 					data: { compatibility_mode_urls: remainingUrls }
 				} )
@@ -193,7 +193,7 @@ function App() {
 			setFlushing( true )
 
 			await admin.fetch( {
-				path: '/theme/v1/settings/update',
+				path: '/nicholas/v1/settings/update',
 				method: 'POST',
 				data: { flush_cache: true }
 			} )

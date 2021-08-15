@@ -81,4 +81,4 @@ window.onload = function () {
 }
 
 
-export { fetch, Post, Comments }
+export { fetch, Post, Comments, Url }

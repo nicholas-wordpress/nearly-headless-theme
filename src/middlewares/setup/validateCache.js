@@ -2,7 +2,7 @@ import { clearCache } from 'nicholas-router'
 
 function check() {
 	new Promise( async ( res, rej ) => {
-		const status = await theme.fetch( { path: '/theme/v1/cache-status' } )
+		const status = await theme.fetch( { path: '/nicholas/v1/cache-status' } )
 		const cacheStatus = JSON.parse( window.sessionStorage.getItem( 'cacheStatus' ) )
 		let cleared = false
 

@@ -11,7 +11,7 @@ export default ( args, next ) => {
 	// Wrap this in a promise - no need to wait for it.
 	new Promise( async ( res, rej ) => {
 
-		const { output } = await theme.fetch( { path: `theme/v1/comment-output?path=${args.url.pathname}` } )
+		const { output } = await theme.fetch( { path: `nicholas/v1/comment-output?path=${args.url.pathname}` } )
 
 		// Set store to comment output
 		Alpine.store( 'comments', output )

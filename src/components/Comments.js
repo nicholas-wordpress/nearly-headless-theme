@@ -14,7 +14,7 @@ export default function () {
 				this.isLoading = true
 
 				// fetch comments
-				const { output } = await theme.fetch( { path: `theme/v1/comment-output?path=${window.location.pathname}` } )
+				const { output } = await theme.fetch( { path: `nicholas/v1/comment-output?path=${window.location.pathname}` } )
 
 				Alpine.store( 'comments', output )
 

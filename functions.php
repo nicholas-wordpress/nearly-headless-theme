@@ -20,12 +20,12 @@ if ( ! file_exists( $autoload ) ) {
 require_once( $autoload );
 
 // Enqueue theme script
-add_action( 'theme/enqueue_app_scripts', function () {
+add_action( 'nicholas/enqueue_app_scripts', function () {
 	nicholas()->scripts()->get( 'theme' )->enqueue();
 } );
 
 // Add compatibility mode URLs
-add_filter( 'theme/compatibility_mode_urls', function ( $urls ) {
+add_filter( 'nicholas/compatibility_mode_urls', function ( $urls ) {
 
 	// Filter Twitter Embeds
 	$filtered_urls = Nicholas::get_urls_for_query( [

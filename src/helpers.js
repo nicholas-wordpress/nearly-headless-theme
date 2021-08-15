@@ -24,7 +24,7 @@ function setLoadingState( to ) {
 }
 
 async function setCompatibilityModeUrls() {
-	const compatibilityModeUrls = await theme.fetch( { path: 'theme/v1/compatibility-mode-urls' } )
+	const compatibilityModeUrls = await theme.fetch( { path: 'nicholas/v1/compatibility-mode-urls' } )
 
 	Alpine.store( 'compatibilityModeUrls', compatibilityModeUrls );
 }

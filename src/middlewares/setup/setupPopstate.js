@@ -18,7 +18,7 @@ export default ( args, next ) => {
 				// Sometimes, history gets saved before comments are added. In this case, go fetch the data.
 				} else {
 					new Promise( async ( res, rej ) => {
-						const { output } = await theme.fetch( { path: `theme/v1/comment-output?path=${url.pathname}` } )
+						const { output } = await theme.fetch( { path: `nicholas/v1/comment-output?path=${url.pathname}` } )
 
 						// Set store to comment output
 						Alpine.store( 'comments', output )

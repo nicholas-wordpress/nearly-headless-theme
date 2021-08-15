@@ -13,7 +13,7 @@ export default async ( args, next ) => {
 	if ( !cache ) {
 		// Fetch data data for the current url
 		args.data = await theme.fetch( {
-			path: `/theme/v1/page-info?path=${args.url.pathname}`,
+			path: `/nicholas/v1/page-info?path=${args.url.pathname}`,
 		} )
 
 		// Add data to cache
