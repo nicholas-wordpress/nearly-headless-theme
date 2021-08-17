@@ -27,4 +27,6 @@ export default function ( args, next ) {
 	check()
 	// Check cache every 5 minutes
 	window.setInterval( check, 300000 )
+
+	next()
 }

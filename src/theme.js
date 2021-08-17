@@ -6,12 +6,10 @@ import updateStore from './middlewares/route/updateStore'
 import updateHistory from './middlewares/route/updateHistory'
 import setupPopstate from './middlewares/setup/setupPopstate'
 import validateCache from './middlewares/setup/validateCache'
-import { setStore, setLoadingState, setHistory } from './helpers'
+import { setStore, setLoadingState } from './helpers'
 import {
-	addCacheActions,
 	addRouteActions,
 	handleClickMiddleware,
-	route,
 	setupRouter,
 	Url,
 	validateMiddleware
@@ -23,7 +21,8 @@ import {
 	updateAdminBar,
 	validateAdminPage,
 	validateCompatibilityMode,
-	primeCache
+	primeCache,
+	setPreloadWorker
 } from 'nicholas-wp/middlewares'
 
 // Delay startup of this script until after the page is loaded.
@@ -73,7 +72,16 @@ window.onload = function () {
 	)
 
 	// Fire up Nicholas router
-	setupRouter( handleClickMiddleware, setupPopstate, validateCache )
+	setupRouter(
+		// Setup event listener for clicks
+		handleClickMiddleware,
+		// Setup pop state (history) handler
+		setupPopstate,
+		// Check the cache to see if it needs flushed every 5 minutes
+		validateCache,
+		// Continue to scan the page for URLs to preload, and store in the cache
+		setPreloadWorker
+	)
 
 	// Fire up AlpineJS
 	Alpine.start()
