@@ -5,7 +5,6 @@ import fetchComments from './middlewares/route/fetchComments'
 import updateStore from './middlewares/route/updateStore'
 import updateHistory from './middlewares/route/updateHistory'
 import setupPopstate from './middlewares/setup/setupPopstate'
-import validateCache from './middlewares/setup/validateCache'
 import { setStore, setLoadingState } from './helpers'
 import {
 	addRouteActions,
@@ -22,7 +21,8 @@ import {
 	validateAdminPage,
 	validateCompatibilityMode,
 	primeCache,
-	setPreloadWorker
+	setPreloadWorker,
+	validateCacheWorker
 } from 'nicholas-wp/middlewares'
 
 // Delay startup of this script until after the page is loaded.
@@ -78,7 +78,7 @@ window.onload = function () {
 		// Setup pop state (history) handler
 		setupPopstate,
 		// Check the cache to see if it needs flushed every 5 minutes
-		validateCache,
+		validateCacheWorker,
 		// Continue to scan the page for URLs to preload, and store in the cache
 		setPreloadWorker
 	)
