@@ -17,8 +17,8 @@
   "license": "ISC",
   "dependencies": {
     "alpinejs": "^3.2.3",
-    "nicholas-router": "^1.0.4",
-    "nicholas-wp": "^1.0.3"
+    "nicholas-router": "^1.0",
+    "nicholas-wp": "^1.0"
   },
   "devDependencies": {
     "@wordpress/scripts": "*"
