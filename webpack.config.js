@@ -24,6 +24,7 @@ module.exports = {
 		entry: {
 			theme: './src/theme.js',
 			editor: './src/editor.js',
+			sessionManager: './src/session-manager.js',
 			admin: './src/admin.js'
 		},
 

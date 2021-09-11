@@ -158,19 +158,20 @@
         },
         {
             "name": "nicholas-wordpress/core",
-            "version": "1.0.0",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nicholas-wordpress/underpin-module.git",
-                "reference": "b019abb9fd34d45a5e9778800b69ef716b2e76c1"
+                "reference": "50be4171700e0149b21342f12fd4381e42ea9148"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nicholas-wordpress/underpin-module/zipball/b019abb9fd34d45a5e9778800b69ef716b2e76c1",
-                "reference": "b019abb9fd34d45a5e9778800b69ef716b2e76c1",
+                "url": "https://api.github.com/repos/nicholas-wordpress/underpin-module/zipball/50be4171700e0149b21342f12fd4381e42ea9148",
+                "reference": "50be4171700e0149b21342f12fd4381e42ea9148",
                 "shasum": ""
             },
             "require": {
+                "underpin/decision-list-loader": "^1.0",
                 "underpin/meta-loader": "^1.0",
                 "underpin/option-loader": "^1.0",
                 "underpin/rest-endpoint-loader": "^1.0",
@@ -200,9 +201,9 @@
             "description": "Nearly-headless application support for WordPress themes",
             "support": {
                 "issues": "https://github.com/nicholas-wordpress/underpin-module/issues",
-                "source": "https://github.com/nicholas-wordpress/underpin-module/tree/1.0.0"
+                "source": "https://github.com/nicholas-wordpress/underpin-module/tree/1.0.2"
             },
-            "time": "2021-08-15T14:49:32+00:00"
+            "time": "2021-09-11T21:53:12+00:00"
         },
         {
             "name": "underpin/cron-job-loader",
@@ -358,16 +359,16 @@
         },
         {
             "name": "underpin/option-loader",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Underpin-WP/option-loader.git",
-                "reference": "5c28b795e336a0d07269747ffc1dc27d47e9d857"
+                "reference": "b9e66e11264162827ff7dce3c0a8992932497304"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Underpin-WP/option-loader/zipball/5c28b795e336a0d07269747ffc1dc27d47e9d857",
-                "reference": "5c28b795e336a0d07269747ffc1dc27d47e9d857",
+                "url": "https://api.github.com/repos/Underpin-WP/option-loader/zipball/b9e66e11264162827ff7dce3c0a8992932497304",
+                "reference": "b9e66e11264162827ff7dce3c0a8992932497304",
                 "shasum": ""
             },
             "type": "library",
@@ -389,9 +390,9 @@
             "description": "Option loader for Underpin",
             "support": {
                 "issues": "https://github.com/Underpin-WP/option-loader/issues",
-                "source": "https://github.com/Underpin-WP/option-loader/tree/1.0.0"
+                "source": "https://github.com/Underpin-WP/option-loader/tree/1.0.1"
             },
-            "time": "2021-05-06T00:44:59+00:00"
+            "time": "2021-08-25T23:24:29+00:00"
         },
         {
             "name": "underpin/rest-endpoint-loader",
@@ -432,16 +433,16 @@
         },
         {
             "name": "underpin/script-loader",
-            "version": "1.1.2",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Underpin-WP/script-loader.git",
-                "reference": "5f21ad24d40deff33831911f1f10863ebe0056e8"
+                "reference": "396615d03ae4047d482c7678f671d7ea0fcfe177"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Underpin-WP/script-loader/zipball/5f21ad24d40deff33831911f1f10863ebe0056e8",
-                "reference": "5f21ad24d40deff33831911f1f10863ebe0056e8",
+                "url": "https://api.github.com/repos/Underpin-WP/script-loader/zipball/396615d03ae4047d482c7678f671d7ea0fcfe177",
+                "reference": "396615d03ae4047d482c7678f671d7ea0fcfe177",
                 "shasum": ""
             },
             "type": "library",
@@ -463,9 +464,9 @@
             "description": "Script Loader for Underpin",
             "support": {
                 "issues": "https://github.com/Underpin-WP/script-loader/issues",
-                "source": "https://github.com/Underpin-WP/script-loader/tree/1.1.2"
+                "source": "https://github.com/Underpin-WP/script-loader/tree/1.1.4"
             },
-            "time": "2021-07-09T14:14:31+00:00"
+            "time": "2021-09-11T21:09:02+00:00"
         },
         {
             "name": "underpin/template-loader",

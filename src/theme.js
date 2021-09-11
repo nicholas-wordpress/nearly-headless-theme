@@ -8,6 +8,7 @@ import setupPopstate from './middlewares/setup/setupPopstate'
 import { setStore, setLoadingState } from './helpers'
 import {
 	addRouteActions,
+	clearSessionCacheMiddleware,
 	handleClickMiddleware,
 	setupRouter,
 	Url,
@@ -73,6 +74,8 @@ window.onload = function () {
 
 	// Fire up Nicholas router
 	setupRouter(
+		// Maybe clear the session cache.
+		clearSessionCacheMiddleware,
 		// Setup event listener for clicks
 		handleClickMiddleware,
 		// Setup pop state (history) handler
